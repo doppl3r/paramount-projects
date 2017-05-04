@@ -42,6 +42,16 @@
         </div>
     </nav>
 
+    <section class="header background-playpen" style="background-image: url('img/pool-background-2.jpg');">
+        <div class="wrapper">
+            <div class="content">
+                <h4>online application</h4>
+                <h1>need financing?</h1>
+                <a class="btn btn-default" href="https://youtu.be/FCxyTf_LoGY" target="_blank">watch pool financing video</a>
+            </div>
+        </div>
+    </section>
+
     <table align="center" id="table1" border="0" width="930" cellspacing="0" cellpadding="0">
         <tbody>
             <tr>

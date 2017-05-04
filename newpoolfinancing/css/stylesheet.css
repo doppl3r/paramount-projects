@@ -62,6 +62,8 @@ html {
         background-image: url("../img/header-image.jpg"); }
         html body .header.header-1 .btn {
           margin-top: 16px; }
+      html body .header.background-playpen {
+        height: 320px; }
       html body .header .content {
         align-self: center;
         display: inline-block;
