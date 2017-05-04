@@ -6,6 +6,7 @@ body {
 	font-size: .8em;
 	line-height: 1.2em;
 	margin-top: 0px;
+	margin: 0;
 	padding: 0px;  
 	color:#333333;  }
 
@@ -211,3 +212,56 @@ display: block;  }
 	text-decoration: none;	}
 /* END OF STUFF ADDED FOR PRODUCT SUBMENUS  */
 /*END OF STUFF ADDED FOR SHRINKING/GROWING MENU ON PRODUCTS PAGE */
+
+table { margin: auto; }
+td[width="1"],
+td[height="4"],
+td[width="11"],
+td[width="40"],
+td[width="45"],
+td[width="57"],
+td[width="95"],
+td[width="99"],
+td[width="100"],
+td[width="103"],
+td[width="108"],
+td[width="115"],
+td[width="121"],
+td[width="124"],
+td[width="127"],
+td[width="132"],
+td[width="139"],
+td[width="147"],
+td[width="154"],
+td[width="157"],
+td[width="158"],
+td[width="165"],
+td[height="171"],
+td img[height="171"],
+td[width="181"],
+td img[height="195"],
+td[width="197"],
+td[width="200"],
+td[width="201"],
+td[width="217"], /*left nav*/
+td[width="222"],
+td[width="223"],
+td[width="226"],
+td[width="294"],
+td[height="315"],
+td[width="455"],
+td[width="491"]
+{ display: none; }
+
+/*hide shadows*/
+span.footer { visibility: hidden; }
+td[background*="shadow"] { visibility: hidden; }
+img[src*="shadow"] { visibility: hidden; }
+img[src*="curve"] { visibility: hidden; }
+#table1 { display: none; }
+
+/*mobile overrides*/
+@media (max-width: 1024px) {
+	table[width="930"]{ max-width: 100%; width: initial; }
+	td[width="635"] { max-width: 100%; width: initial;}
+}

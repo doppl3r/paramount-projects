@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+    <script>
+        function clearDefaultandCSS(el) {
+            if (el.defaultValue == el.value) el.value = ""
+            // If Dynamic Style is supported, clear the style
+            if (el.style) el.style.cssText = ""
+        }
+
+    </script>
+
+    <style type="text/css">
+        .textboxinput {
+            border: 1px solid #808080;
+            color: #808080;
+            font-size: 12px
+        }
+    </style>
+    <style type="text/css">
+        img[src="images/ad1.png"],
+        img[src="images/ad2.png"],
+        img[src="images/ad4.png"],
+        img[src="images/ad3.png"] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://1paramount.infusionsoft.com/AddForms/processFormSecure.jsp" method="POST">
+        <input value="4d8185d8b80712c9ff61c549cc8a5aca" type="hidden" name="infusion_xid" id="infusion_xid">
+        <input name="infusion_type" type="hidden" value="CustomFormWeb" id="infusion_type">
+        <input value="PCF - The Secret" type="hidden" name="infusion_name" id="infusion_name">
+        <input type="hidden" name="redirect" value="poolreport_thanks.html">
+
+        <table border="0" width="206" background="images/poolreport_form.jpg" id="table9" height="225">
+            <tbody>
+                <tr>
+                    <td colspan="2" height="41">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="41">
+                        <p align="center">
+                            <input type="text" id="ContactFirstName" name="Contact0FirstName" size="20" class="textboxinput" onfocus="clearDefaultandCSS(this)"
+                                value="YOUR NAME">
+                            <br>
+                            <input type="text" id="ContactEmail" name="Contact0Email" size="20" class="textboxinput" onfocus="clearDefaultandCSS(this)"
+                                value="EMAIL"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="87%"><input type="submit" value="Submit" id="submit" name="submit" style="float: right"></td>
+                    <td width="8%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <font size="1">&nbsp;</font>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

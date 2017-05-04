@@ -1,0 +1,538 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <title>Paramount Capital</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script language="JavaScript">
+        right_on=new Image(73, 36); right = new Image(73, 36);
+        right_on.src = "right_on.gif"; right.src = "right.gif";
+
+        function checkNumber(input, min, max, msg) {
+            msg = msg + " field has invalid data: " + input.value;
+            var str = input.value;
+            for (var i = 0; i < str.length; i++) {
+                var ch = str.substring(i, i + 1)
+                if ((ch < "0" || "9" < ch) && ch != '.') {
+                    alert(msg);
+                    return false;
+                }
+            }
+            var num = 0 + str
+            if (num < min || max < num) {
+                alert(msg + " not in range [" + min + ".." + max + "]");
+                return false;
+            }
+            input.value = str;
+            return true;
+        }
+
+
+        function computeField(input) {
+            if (input.value != null && input.value.length != 0)
+                input.value = "" + eval(input.value);
+            computeForm(input.form);
+        }
+
+
+        function computeForm(form) {
+            if ((form.payments.value == null || form.payments.value.length == 0) ||
+                (form.interest.value == null || form.interest.value.length == 0) ||
+                (form.principal.value == null || form.principal.value.length == 0)) {
+                return;
+            }
+
+            if (!checkNumber(form.payments, 1, 480, "# of payments") ||
+                !checkNumber(form.interest, .001, 99, "Interest") ||
+                !checkNumber(form.principal, 100, 10000000, "Principal")) {
+                form.payment.value = "Invalid";
+                return;
+            }
+
+            var i = form.interest.value;
+            if (i > 1.0) {
+                i = i / 100.0;
+                form.interest.value = i;
+            }
+            i /= 12;
+
+            var pow = 1;
+            for (var j = 0; j < form.payments.value; j++)
+                pow = pow * (1 + i);
+            form.payment.value = (form.principal.value * pow * i) / (pow - 1)
+            form.payment.value = Math.round(form.payment.value)
+        }
+
+        function clearForm(form) {
+            form.payments.value = "";
+            form.interest.value = "";
+            form.principal.value = "";
+        }
+
+// END HIDE -->
+
+    </script>
+    <style type="text/css">
+        img[src="images/ad4.png"],
+        img[src="images/ad1.png"],
+        img[src="images/ad2.png"],
+        img[src="images/ad3.png"] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <a class="menu-button">≡</a>
+            <ul>
+                <li class="logo"><a href="index.html"><img src="img/pcf_logo.jpg"></a></li>
+                <li class="item"><a href="about.html">About Us</a></li>
+                <li class="item"><a href="application_online.asp">Need Financing</a></li>
+                <li class="item"><a href="findbuilder.html">Find a Builder</a></li>
+                <li class="item"><a href="builderapplication.html">Become a Dealer</a></li>
+                <li class="item"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <table align="center" id="table1" border="0" width="930" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="30" colspan="2" height="34" background="images/nav/background/top-left-corner-shadow-34.gif">&nbsp;
+                </td>
+                <td width="491" rowspan="2" height="90" align="left">
+                    <div id="logo">
+                        <a href="/">
+					<img border="0" src="images/pcf_logo.jpg" width="163" height="72" alt="Paramount Pool Financing">
+				</a>
+                    </div>
+                </td>
+                <td width="16">
+                    <img border="0" src="images/nav/background/top-nav-left-curve.jpg" width="16" height="34" alt=""></td>
+                <td width="95">
+                    <a href="contact.html" onmouseover="document.contact_button.src='images/nav/contact_on.jpg'" onmouseout="document.contact_button.src='images/nav/contact_off.jpg'">
+			<img border="0" src="images/nav/contact_off.jpg" name="contact_button" width="95" height="34" alt="Contact Us"></a></td>
+                <td width="165">
+                    <a href="paymentcalc.html" onmouseover="document.paymentcalc_button.src='images/nav/paymentcalc_on.jpg'" onmouseout="document.paymentcalc_button.src='images/nav/paymentcalc_on.jpg'">
+			<img border="0" src="images/nav/paymentcalc_on.jpg" name="paymentcalc_button" width="165" height="34" alt="Payment Calculator"></a></td>
+                <td width="103">
+                    <a href="https://www.newpoolfinancing.com/application_online.asp" onmouseover="document.apply_button.src='images/nav/apply_on.jpg'"
+                        onmouseout="document.apply_button.src='images/nav/apply_off.jpg'">
+			<img border="0" src="images/nav/apply_off.jpg" name="apply_button" width="103" height="34" alt="Apply Online"></a></td>
+                <td width="15">
+                    <img border="0" src="images/nav/background/top-right-corner-shadow.jpg" width="15" height="34" alt=""></td>
+                <td width="15" background="images/nav/background/top-right-corner-shadow-new.gif">&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif"></td>
+                <td width="15"></td>
+                <td colspan="5" align="right">
+                    <img border="0" src="images/phonenumber.jpg"></td>
+                <td width="15" background="images/nav/background/right-shadow-slice.gif" height="56"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" id="table2" border="0" width="930" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif"></td>
+                <td width="108">
+                    <a href="index.html" onmouseover="document.home_button.src='images/nav/home_on.jpg'" onmouseout="document.home_button.src='images/nav/home_off.jpg'">
+			<img border="0" src="images/nav/home_off.jpg" name="home_button" width="108" height="23" alt="Home"></a></td>
+                <td width="121">
+                    <a href="about.html" onmouseover="document.about_button.src='images/nav/aboutus_on.jpg'" onmouseout="document.about_button.src='images/nav/aboutus_off.jpg'">
+			<img border="0" src="images/nav/aboutus_off.jpg" name="about_button" width="121" height="23" alt="About Us"></a></td>
+                <td width="154">
+                    <a href="homeowners.html" onmouseover="document.homeowners_button.src='images/nav/homeowners_on.jpg'" onmouseout="document.homeowners_button.src='images/nav/homeowners_off.jpg'">
+			<img border="0" src="images/nav/homeowners_off.jpg" name="homeowners_button" width="154" height="23" alt="Homeowners"></a></td>
+                <td width="139">
+                    <a href="builderapplication.html" onmouseover="document.builders_button.src='images/nav/builders_on.jpg'" onmouseout="document.builders_button.src='images/nav/builders_off.jpg'">
+			<img border="0" src="images/nav/builders_off.jpg" name="builders_button" width="139" height="23" alt="Builders"></a></td>
+                <td width="197">
+                    <a href="poolguide.html" onmouseover="document.poolguide_button.src='images/nav/poolguide_on.jpg'" onmouseout="document.poolguide_button.src='images/nav/poolguide_off.jpg'">
+			<img border="0" src="images/nav/poolguide_off.jpg" name="poolguide_button" width="197" height="23" alt="Pool Guide"></a></td>
+                <td width="181">
+                    <a href="findbuilder.html" onmouseover="document.findbuilder_button.src='images/nav/findbuilder_on.jpg'" onmouseout="document.findbuilder_button.src='images/nav/findbuilder_off.jpg'">
+			<img border="0" src="images/nav/findbuilder_off.jpg" name="findbuilder_button" width="181" height="23" alt="Find an Authorized Builder"></a></td>
+                <td width="15" background="images/nav/background/right-shadow-slice.gif"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" id="table3" border="0" width="930" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif"></td>
+                <td width="900" height="4" bgcolor="#96959A" colspan="4"></td>
+                <td width="15" background="images/nav/background/right-shadow-slice.gif"></td>
+            </tr>
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif"></td>
+                <td width="217" bgcolor="#96959A" valign="top">
+
+                    <a href="/application_online.asp" onmouseover="document.left_financing_button.src='/images/nav/left_financing_on.jpg'" onmouseout="document.left_financing_button.src='/images/nav/left_financing_off.jpg'">
+			<img border="0" src="/images/nav/left_financing_off.jpg" width="217" name="left_financing_button" alt="Apply for Financing!"></a>
+
+                    <a href="/findbuilder.html" onmouseover="document.left_findbuilder_button.src='/images/nav/left_findbuilder_on.jpg'" onmouseout="document.left_findbuilder_button.src='/images/nav/left_findbuilder_off.jpg'">
+			<img border="0" src="/images/nav/left_findbuilder_off.jpg" width="217" name="left_findbuilder_button" alt="Find Builder!"></a>
+
+                    <a href="/builderapplication.html" onmouseover="document.left_builder_button.src='/images/nav/left_builder_on.jpg'" onmouseout="document.left_builder_button.src='/images/nav/left_builder_off.jpg'">
+			<img border="0" src="/images/nav/left_builder_off.jpg" width="217" name="left_builder_button" alt="Become a Dealer!"></a>
+
+                </td>
+                <td width="683" valign="top" height="171" colspan="3">
+                    <img border="0" src="images/banner_calc.jpg" width="683" height="171"></td>
+
+                <td width="15" background="images/nav/background/right-shadow-slice.gif"></td>
+            </tr>
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif"></td>
+                <td width="217" valign="top"><img border="0" src="images/nav/background/left-nav-bottom-curve.gif" width="217" height="6" alt=""></td>
+                <td width="683" valign="top" height="24" colspan="3" align="right">&nbsp;</td>
+                <td width="15" background="images/nav/background/right-shadow-slice.gif"></td>
+            </tr>
+
+
+            <tr>
+                <td width="15" background="images/nav/background/left-shadow-slice.gif" rowspan="2"></td>
+                <td width="217" rowspan="2" valign="top">
+                    <table border="0" width="217" id="table5">
+                        <tbody>
+                            <tr>
+                                <td align="center" width="53">&nbsp;
+                                </td>
+                                <td align="center" width="54">&nbsp;
+                                </td>
+                                <td align="center" width="54">&nbsp;
+                                </td>
+                                <td align="center" width="54">&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p align="center">
+                        <iframe marginheight="0" marginwidth="0" id="poolreport" name="poolreport" src="poolreport.html" vspace="0" hspace="0" frameborder="0"
+                            height="225" scrolling="no" width="206">
+                        </iframe>
+                        <br>
+                        <br>
+                        <a href="http://www.1paramount.com/products/mdxr3/">
+						<img border="0" src="images/ad_mdxr3_safety.jpg" width="201" height="145"></a><a href="http://www.1paramount.com/products/clearo3/"><img border="0" src="images/ad_clear03.jpg" width="201" height="145"></a>
+                        <a
+                            href="http://www.1paramount.com/products"><img border="0" src="images/ad_simplify_with_paramount.jpg" width="201" height="145"></a>
+                    </p>
+                </td>
+                <td width="14" rowspan="2">&nbsp;
+                </td>
+                <td width="635" valign="top" rowspan="2">
+                    <div align="center">
+                        <p align="left"><span class="title"><font color="#658879">
+				Payment Calculator</font></span></p>
+                        <p align="left">To use our payment calculator, you can view up to 3 scenarios at a time. Simply enter the number
+                            of payments, interest rate and loan amount and click the calculate button. You can then repeat
+                            this two more times. </p>
+                        <p align="left">Please note this can be used to get an idea of what you payment will be. Actual payment will be based
+                            on the loan amount, interest rate and length of payments that will be determined at the time
+                            of loan based on a number of factors. </p>
+                        <hr>
+                        <form method="POST">
+                            <div align="center">
+                                <table border="0" cellspacing="0" cellpadding="0" width="543">
+                                    <tbody>
+                                        <tr>
+                                            <th align="left" bgcolor="#FFFFFF" colspan="6" width="541">
+                                                <p align="center">&nbsp;
+                                                </p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th align="left" bgcolor="#263E83" style="background-color: #658879" width="69">
+                                                <p align="center">
+                                                    <font face="arial" size="2" color="#FFFFFF">&nbsp;# of
+                                                        <br> Payments
+                                                    </font>
+                                                </p>
+                                            </th>
+                                            <th align="left" bgcolor="#263E83" style="background-color: #658879" width="77">
+                                                <p align="center">
+                                                    <font face="arial" size="2" color="#FFFFFF">Interest<br> Rate
+                                                    </font>
+                                                </p>
+                                            </th>
+                                            <th align="left" bgcolor="#263E83" style="background-color: #658879" width="91">
+                                                <p align="center">
+                                                    <font face="arial" size="2" color="#FFFFFF">Loan<br> Amount
+                                                    </font>
+                                                </p>
+                                            </th>
+                                            <th bgcolor="#263E83" style="background-color: #658879" width="109">&nbsp;</th>
+                                            <th align="left" bgcolor="#263E83" style="background-color: #658879" width="101">
+                                                <p align="center">
+                                                    <font face="arial" size="2" color="#FFFFFF">Monthly<br> Payment
+                                                    </font>
+                                                </p>
+                                            </th>
+                                            <th bgcolor="#263E83" style="background-color: #658879" width="84">&nbsp;</th>
+                                        </tr>
+                                        <tr>
+                                            <td width="69" bgcolor="#ECECEC">&nbsp;</td>
+                                            <td width="77" bgcolor="#ECECEC">&nbsp;</td>
+                                            <td width="91" bgcolor="#ECECEC">&nbsp;</td>
+                                            <td bgcolor="#ECECEC" width="109">&nbsp;</td>
+                                            <td width="101" bgcolor="#ECECEC">&nbsp;</td>
+                                            <td bgcolor="#ECECEC" width="84">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="69" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="payments" size="5" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="77" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="interest" size="6" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="91" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="principal" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td bgcolor="#ECECEC" width="109">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="button" value="Calculate" onclick="computeForm(this.form)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="101" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input name="payment" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td bgcolor="#ECECEC" width="84">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="reset" value="Clear" onclick="clearForm(this.form)"></font>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+
+                                        <form method="POST"></form>
+                                        <tr>
+                                            <td width="531" bgcolor="#ECECEC" colspan="6">
+                                                <hr>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="69" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="payments" size="5" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="77" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="interest" size="6" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="91" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="principal" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td align="center" bgcolor="#ECECEC" width="109">
+                                                <font color="#C0C0C0"><input type="button" value="Calculate" onclick="computeForm(this.form)"></font>
+                                            </td>
+                                            <td width="101" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input name="payment" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td align="center" bgcolor="#ECECEC" width="84">
+                                                <font color="#C0C0C0"><input type="reset" value="Clear" onclick="clearForm(this.form)"></font>
+                                            </td>
+                                        </tr>
+
+
+                                        <form method="POST"></form>
+                                        <tr>
+                                            <td width="531" bgcolor="#ECECEC" colspan="6">
+                                                <hr>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="69" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="payments" size="5" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="77" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="interest" size="6" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td width="91" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input type="TEXT" name="principal" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td align="center" bgcolor="#ECECEC" width="109">
+                                                <font color="#C0C0C0"><input type="button" value="Calculate" onclick="computeForm(this.form)"></font>
+                                            </td>
+                                            <td width="101" bgcolor="#ECECEC">
+                                                <p align="center">
+                                                    <font color="#C0C0C0"><input name="payment" size="8" onchange="computeField(this)"></font>
+                                                </p>
+                                            </td>
+                                            <td align="center" bgcolor="#ECECEC" width="84">
+                                                <font color="#C0C0C0"><input type="reset" value="Clear" onclick="clearForm(this.form)"></font>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="531" bgcolor="#ECECEC" colspan="6">
+                                                <hr>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </td>
+                <td width="34" rowspan="2" valign="top">&nbsp;
+                </td>
+                <td width="15" background="images/nav/background/right-shadow-slice.gif" rowspan="2"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" id="table4" border="0" width="930" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="35">
+                    <img border="0" src="images/nav/background/bottom-left-corner-shadow.gif" width="35" height="35" alt=""></td>
+                <td width="859" background="images/nav/background/bottom-center-shadow-slice.gif" colspan="3"></td>
+                <td width="35">
+                    <img border="0" src="images/nav/background/bottom-right-corner-shadow.gif" width="35" height="35" alt=""></td>
+            </tr>
+            <tr>
+                <td width="35"></td>
+                <td width="622">
+                    <span class="footer">
+				295 East Corporate Place, Suite 100&nbsp; Chandler, AZ 85225 | Toll Free 1.877.289.3866 | 
+				Fax: 877.766.5729
+				<br>Copyright 2011 Paramount Leisure Industries, Inc. All rights reserved
+			</span>
+                </td>
+                <td width="15">
+                    <a href="http://www.1paramount.com/blog/2010/04/16/2010poolsearchaward/" onmouseover="document.cert_button.src='/images/cert2010-trade-icon-color.jpg'"
+                        onmouseout="document.cert_button.src='/images/cert2010-trade-icon.jpg'">
+				&nbsp;</a></td>
+                <td width="222">
+                    <a href="http://www.1paramount.com/blog/category/finance/" target="_blank">
+			<img border="0" src="images/latest-finance-updates.jpg" width="173" height="35" align="right"></a></td>
+                <td width="35"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul>
+                        <li><a><strong>IN-FLOOR SYSTEMS</strong></a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/pcc2000/" target="_blank">PCC2000</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/pv3/" target="_blank">PV3</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/pvr/" target="_blank">PVR</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/cyclean/" target="_blank">CYCLEAN</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/vanquish/" target="_blank">VANQUISH</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/vanish/" target="_blank">VANISH</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/vantage/" target="_blank">VANTAGE</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/ecopool/" target="_blank">ECOPOOL</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/swingjets/" target="_blank">SWINGJETS</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/vectorjet/" target="_blank">VECTORJET</a></li>
+                        <li><a href="http://www.1paramount.com/in-floor-systems/retrojets/" target="_blank">RETROJETS</a></li>
+                    </ul>
+                    <a href="http://www.1paramount.com/about-us/" target="_blank"><img src="img/made-in-use.png"/></a>
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li><a><strong>WATER SANITIZATION</strong></a></li>
+                        <li><a href="http://www.1paramount.com/water-sanitization/ultra-uv2/" target="_blank">ULTRA UV2</a></li>
+                        <li><a href="http://www.1paramount.com/water-sanitization/clear-o3/" target="_blank">CLEAR O3</a></li>
+                        <li><a href="http://www.1paramount.com/water-sanitization/ultra-clear/" target="_blank">ULTRA CLEAR</a></li>
+                    </ul>
+                    <ul>
+                        <li><a><strong>DEBRIS REMOVAL</strong></a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/mdx-r3/" target="_blank">MDX-R3</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/sdx2/" target="_blank">SDX2</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/superflow-360/" target="_blank">SUPERFLOW 360</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/buzztop/" target="_blank">BUZZTOP</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/paraskim-v/" target="_blank">PARASKIM V</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/edc/" target="_blank">EDC</a></li>
+                        <li><a href="http://www.1paramount.com/debris-removal/ddc/" target="_blank">DDC AND MVFUSE</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li><a><strong>WATER FEATURES/SPA/LIGHTING</strong></a></li>
+
+                        <li><a href="http://www.1paramount.com/pool-spa-features/parascope/" target="_blank">PARASCOPE</a></li>
+                        <li><a href="http://www.1paramount.com/pool-spa-features/airbar/" target="_blank">AIRBAR</a></li>
+                        <li><a href="http://www.1paramount.com/pool-spa-features/paraglo/" target="_blank">PARAGLO</a></li>
+                        <li><a href="http://www.1paramount.com/pool-spa-features/parajets/" target="_blank">PARAJETS</a></li>
+                        <li><a href="http://www.1paramount.com/pool-spa-features/jetpak/" target="_blank">JETPAK</a></li>
+                        <li><a href="http://www.1paramount.com/pool-spa-features/airport/" target="_blank">AIRPORT</a></li>
+                    </ul>
+                    <ul>
+                        <li><a><strong>COMPANY INFO</strong></a></li>
+
+                        <li><a href="http://www.1paramount.com/about-us/" target="_blank">ABOUT US</a></li>
+                        <li><a href="http://www.1paramount.com/support/warranty/" target="_blank">WARRANTY</a></li>
+                        <li><a href="http://www.1paramount.com/support/patent-numbers/" target="_blank">PATENT NUMBERS</a></li>
+                        <li><a href="http://www.1paramount.com/support/faq/" target="_blank">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li><a href="http://www.1paramount.com/free-book/"><img style="margin: -20px 0 20px -20px;" src="img/free-book-image.jpg"></a></li>
+                        <div style="border-top: 1px solid #999; padding: 10px 0;"></div>
+                        <li class="menu-item"><a href="http://www.1paramount.com/find-a-builder/" style="color: #fff; padding: 12px; background-color: #546a5e; margin-bottom: 12px; font-weight: bold; display: block; text-align: center;">Find a Pool Builder</a></li>
+                        <li class="menu-item"><a href="http://www.1paramount.com/builder-login/">Builder Login</a></li>
+                        <li class="menu-item"><a href="http://www.1paramount.com/support/contact/">Become a Dealer</a></li>
+                        <div style="border-top: 1px solid #999; padding: 10px 0;"></div>
+                        <li class="menu-item">
+                            <a target="_blank" style="display: inline-block;" href="https://twitter.com/1paramount">
+                                <img src="img/twitter-link.png">
+                            </a>
+                            <a target="_blank" style="display: inline-block;" href="https://www.facebook.com/paramountpoolandspasystems">
+                                <img src="img/facebook-link.png">
+                            </a>
+                            <a target="_blank" style="display: inline-block;" href="https://www.youtube.com/user/1paramountpool">
+                                <img src="img/youtube-link.png">
+                            </a>
+                            <a target="_blank" style="display: inline-block;" href=" https://www.instagram.com/paramountpoolspasystems">
+                                <img src="img/Instagram.png">
+                            </a>
+                        </li>
+                        <li class="menu-item"><a href="https://www.google.com/maps/place/295+E+Corporate+Pl+%23100,+Chandler,+AZ+85225/@33.3403062,-111.8363883,17z/data=!4m13!1m7!3m6!1s0x872ba9c06b722bed:0x9a0902315aa2b756!2s295+E+Corporate+Pl+%23100,+Chandler,+AZ+85225!3b1!8m2!3d33.3403062!4d-111.8341996!3m4!1s0x872ba9c06b722bed:0x9a0902315aa2b756!8m2!3d33.3403062!4d-111.8341996" target="_blank">295 East Corporate Place, Suite 100  Chandler, AZ 85225</a></li>
+                        <li class="menu-item"><a href="tel:4808937607"><i class="fa fa-phone"></i> 480.893.7607</a></li>
+                        <li class="menu-item"><a href="http://www.1paramount.com/support/contact/"><i class="fa fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <img id="hzDownscaled" style="position: absolute; top: -10000px;"></body>
+
+</html>
