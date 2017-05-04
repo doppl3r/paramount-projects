@@ -1,0 +1,320 @@
+html {
+  background-color: #fff; }
+  html a, html a:hover {
+    text-decoration: none; }
+  html img {
+    max-width: 100%; }
+  html h1 {
+    color: #505050;
+    font-size: 36px; }
+  html h3 {
+    font-size: 30px; }
+  html p {
+    color: #505050;
+    font-family: 'roboto-condensedlight';
+    font-size: 18px; }
+  html .equal-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    html .equal-height .vcenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+  html .btn.btn-default {
+    background-color: #678878;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 36px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase; }
+    html .btn.btn-default.blue {
+      background-color: #317a91; }
+  html body {
+    background-color: #fff;
+    font-family: 'roboto-condensedregular';
+    margin-top: 86px;
+    overflow-x: hidden;
+    /*owl carousel*/ }
+    html body .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 12px; }
+    html body .header {
+      background: url("") no-repeat;
+      background-position-x: 50%;
+      background-position-y: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 480px;
+      padding: 0;
+      position: relative; }
+      html body .header .wrapper {
+        display: flex;
+        height: inherit; }
+      html body .header.header-1 {
+        background-image: url("../img/header-image.jpg"); }
+        html body .header.header-1 .btn {
+          margin-top: 16px; }
+      html body .header .content {
+        align-self: center;
+        display: inline-block;
+        margin: auto;
+        text-align: center; }
+      html body .header h1 {
+        color: #fff;
+        font-size: 92px;
+        line-height: 80px;
+        margin: 0;
+        text-shadow: 0 0 15px rgba(14, 103, 119, 0.5);
+        text-transform: uppercase; }
+      html body .header h4 {
+        color: #fff;
+        font-size: 22px;
+        line-height: 18px;
+        margin: 0;
+        text-shadow: 0 0 15px rgba(14, 103, 119, 0.5);
+        text-transform: uppercase; }
+    html body nav {
+      background-color: #ffffff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1; }
+      html body nav ul {
+        clear: both;
+        color: #666666;
+        font-size: 16px;
+        height: 86px;
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+        position: relative;
+        text-align: right; }
+        html body nav ul li {
+          display: inline-block;
+          height: 86px;
+          padding-left: 24px;
+          vertical-align: top;
+          position: relative; }
+          html body nav ul li.active a, html body nav ul li a:hover {
+            border-color: #678878; }
+          html body nav ul li.logo {
+            left: 0;
+            padding-left: 0;
+            position: absolute; }
+            html body nav ul li.logo a {
+              border-top: none; }
+          html body nav ul li a {
+            border-top: 3px solid transparent;
+            color: #505050;
+            display: table-cell;
+            height: 86px;
+            vertical-align: middle; }
+      html body nav .menu-button {
+        display: none; }
+    html body section {
+      padding: 64px 0;
+      text-align: center; }
+      html body section.background-playpen {
+        background: url("") no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        html body section.background-playpen h1 {
+          color: #fff;
+          font-size: 70px;
+          line-height: 70px;
+          margin: 0;
+          text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          text-transform: uppercase; }
+        html body section.background-playpen h3 {
+          color: #fff;
+          font-size: 30px;
+          line-height: 30px;
+          margin: 0;
+          text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          text-transform: uppercase; }
+          html body section.background-playpen h3.normal {
+            color: #505050;
+            margin-bottom: 24px;
+            text-shadow: none;
+            text-transform: initial; }
+        html body section.background-playpen .btn {
+          margin-top: 24px; }
+      html body section.left-align {
+        text-align: left; }
+    html body footer {
+      background-color: #e9fff4;
+      overflow-x: hidden;
+      padding: 64px 0; }
+      html body footer ul {
+        list-style: none;
+        margin: 0 0 24px;
+        padding: 0; }
+        html body footer ul li a {
+          color: #505050;
+          font-family: 'roboto-condensedlight';
+          font-size: 15px;
+          line-height: 36px;
+          text-transform: uppercase; }
+    html body .owl-carousel .item {
+      padding: 0 10%;
+      text-align: center;
+      min-height: 150px; }
+      html body .owl-carousel .item img {
+        width: initial !important;
+        max-width: 100%; }
+      html body .owl-carousel .item p {
+        color: #505050;
+        margin-top: 8px;
+        margin-bottom: 0; }
+        html body .owl-carousel .item p strong {
+          font-size: 21px; }
+        html body .owl-carousel .item p:nth-of-type(2) {
+          margin-top: 0; }
+    html body .owl-carousel .owl-controls {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      pointer-events: none; }
+    html body .owl-carousel .owl-pagination {
+      display: none; }
+    html body .owl-carousel .owl-prev,
+    html body .owl-carousel .owl-next {
+      visibility: hidden;
+      position: absolute !important; }
+      html body .owl-carousel .owl-prev:after,
+      html body .owl-carousel .owl-next:after {
+        color: #505050;
+        visibility: visible;
+        font-size: 24px;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-transform: scale(1, 4);
+        -moz-transform: scale(1, 4);
+        -ms-transform: scale(1, 4);
+        -o-transform: scale(1, 4);
+        transform: scale(1, 4);
+        font-family: initial;
+        width: 100%;
+        height: 100%; }
+    html body .owl-carousel .owl-prev {
+      left: -48px; }
+      html body .owl-carousel .owl-prev:after {
+        content: '<'; }
+    html body .owl-carousel .owl-next {
+      right: -48px; }
+      html body .owl-carousel .owl-next:after {
+        content: '>'; }
+    html body .nav-tabs {
+      border: none;
+      text-align: center; }
+      html body .nav-tabs > li {
+        display: inline-block;
+        float: initial;
+        font-family: 'roboto-condensedlight';
+        font-size: 20px; }
+        html body .nav-tabs > li a {
+          border: none;
+          color: #505050; }
+          html body .nav-tabs > li a:hover {
+            background-color: transparent; }
+        html body .nav-tabs > li.active > a, html body .nav-tabs > li.active > a:focus, html body .nav-tabs > li.active > a:hover {
+          background-color: transparent;
+          border: none;
+          color: #317a91;
+          text-decoration: underline; }
+
+@media (max-width: 767px) {
+  html .equal-height {
+    display: block; }
+  html body nav ul {
+    background-color: inherit;
+    margin-right: -12px; }
+    html body nav ul .logo {
+      max-width: 50%; }
+    html body nav ul .item {
+      background-color: #f7f7f7;
+      display: none;
+      height: 64.5px;
+      margin: 0 0 0 auto;
+      padding-left: 12px;
+      padding-right: 48px;
+      width: 180px;
+      z-index: 2; }
+      html body nav ul .item a {
+        display: table-cell;
+        height: inherit;
+        text-align: right; }
+    html body nav ul .logo {
+      z-index: 1; }
+  html body nav .menu-button {
+    color: #505050;
+    cursor: pointer;
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 86px;
+    padding: 0 12px;
+    position: absolute;
+    right: 12px;
+    z-index: 1; }
+    html body nav .menu-button:hover {
+      color: #678878; }
+    html body nav .menu-button:hover + ul .item,
+    html body nav .menu-button + ul:hover .item {
+      display: block; }
+  html body section.header h1 {
+    font-size: 64px;
+    line-height: 52px; }
+  html body section.header h4 {
+    font-size: 16px;
+    line-height: 21px; }
+  html body section.background-playpen.left-align {
+    text-align: center; }
+  html body section.background-playpen h1 {
+    font-size: 48px;
+    line-height: 42px; }
+  html body section.background-playpen h3 {
+    font-size: 16px;
+    line-height: 21px; }
+  html body footer {
+    text-align: center; }
+  html body .owl-carousel .owl-prev {
+    left: 0; }
+  html body .owl-carousel .owl-next {
+    right: 0; } }
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on April 25, 2014 */
+@font-face {
+  font-family: 'roboto-condensedregular';
+  src: url("../fonts/robotocondensed-regular-webfont.eot");
+  src: url("../fonts/robotocondensed-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"), url("../fonts/robotocondensed-regular-webfont.woff") format("woff"), url("../fonts/robotocondensed-regular-webfont.ttf") format("truetype"), url("../fonts/robotocondensed-regular-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-condensedbold';
+  src: url("../fonts/robotocondensed-bold-webfont.eot");
+  src: url("../fonts/robotocondensed-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotocondensed-bold-webfont.woff2") format("woff2"), url("../fonts/robotocondensed-bold-webfont.woff") format("woff"), url("../fonts/robotocondensed-bold-webfont.ttf") format("truetype"), url("../fonts/robotocondensed-bold-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-condensedlight';
+  src: url("../fonts/robotocondensed-light-webfont.eot");
+  src: url("../fonts/robotocondensed-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotocondensed-light-webfont.woff2") format("woff2"), url("../fonts/robotocondensed-light-webfont.woff") format("woff"), url("../fonts/robotocondensed-light-webfont.ttf") format("truetype"), url("../fonts/robotocondensed-light-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }

@@ -1,0 +1,213 @@
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: .8em;
+	line-height: 1.2em;
+	margin-top: 0px;
+	padding: 0px;  
+	color:#333333;  }
+
+a:link {TEXT-DECORATION: none;	color:#333333;	}
+a:visited {TEXT-DECORATION: none;	color:#333333;	}
+a:active {TEXT-DECORATION: none;	color:#333333;	}
+
+.rotation , .rotation a:link, .rotation a:visited, .rotation a:active, .rotation a:hover  {
+	font-size: .8em;
+   	text-decoration: underline;
+	font-weight: bold;	}
+
+#logo {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding-left: 25px;	}
+
+.title {
+	font-size: 1em;
+	line-height: 1.4em;
+	font-weight: bold;	}
+
+.subtitle {
+	font-size: 1em;
+	line-height: 1.4em; }
+
+.subsubtitle {
+	font-size: .92em;
+	line-height: 1em;  }
+
+.center {text-align: center}
+.right {align: right}
+.left {text-align: left}
+
+/* begin from old sheet  */
+.main {
+	FONT-SIZE: 12px;
+	color: #333333;
+}
+
+.main A:link {
+    TEXT-DECORATION: underline;
+	FONT-WEIGHT: BOLD;	}
+
+.main A:visited {
+    TEXT-DECORATION: underline;
+	FONT-WEIGHT: BOLD;		}
+
+.main A:hover  {
+    TEXT-DECORATION: underline;
+	FONT-WEIGHT: BOLD;	}
+
+.headings  {
+    FONT-SIZE: 11px; }
+
+.headin  {
+    FONT-SIZE: 14px;
+	FONT-WEIGHT: BOLD; }
+
+/* can remove after all updated pages are uploaded */
+.mediumheadin  {
+    FONT-SIZE: 16px;
+	FONT-WEIGHT: BOLD;  }
+
+.points  {
+    FONT-SIZE: 14px;
+	FONT-WEIGHT: BOLD;  }
+
+.blue  {
+    FONT-SIZE: 14px;
+	FONT-WEIGHT: BOLD;   }
+
+.blue2  {
+    FONT-SIZE: 14px;
+	FONT-WEIGHT: BOLD;  }
+/* end from old sheet  */
+
+.buildersignin {
+	font-size: .8em;
+	line-height: .9em;
+    COLOR: #FFFFFF;
+   	font-weight: normal; 	
+   	position: relative;
+ }
+
+.builderwelcome {
+	font-size: .9em;
+	line-height: 1em;
+    COLOR: #FFFFFF;
+   	font-weight: normal; 	
+   	position: center;
+ }
+
+.menulink, .menulink A:link, .menulink A:visited, .menulink A:active  {
+	display: block;
+	width: 217px;
+	height: 20px;
+	line-height: 20px;
+	text-decoration: none;	}
+
+.menulink A:hover {
+	display: block;
+	width: 217px;
+	height: 20px;
+	background-color:#56555B;
+	text-decoration: none;  	}
+
+.menuon {
+	display: block;
+	width: 217px;
+	height: 20px;
+	background-color:#56555B;
+	text-decoration: none;  	}
+
+.leftnav, .leftnav:link, .leftnav:visited, .leftnav:hover {
+	font-size: .9em;
+	color: #FFFFFF;
+	text-decoration: none;
+	position: relative;
+	left: 15px; }
+
+.rightnav {
+	font-size: .9em;
+    COLOR: #666666;
+   	font-weight: normal; 
+ 	position: relative;
+	left: 15px; }
+
+.rightnav A:link, .rightnav A:visited {
+	font-size: .9em;
+    COLOR: #000080;
+   	font-weight: bold; 
+ 	position: relative;
+	left: 15px; }
+
+.rightnav:hover, .rightnav:active {
+	font-size: .9em;
+    COLOR: #56555B;
+   	font-weight: normal; 
+ 	position: relative;
+	left: 15px; }
+	
+hr {
+	color: #FFFFFF;
+	height: 1px;  
+	width: 100%;
+	text-align: left;/*this will align it for IE*/
+	margin: 0 auto 0 0; /*this will align it left for Mozilla*/
+ }
+
+input	{
+	border: 1px solid #000000;
+	background: #ffffff;
+	color: #999999;
+	font-size: .8em; }
+
+.footer {
+	font-size: .85em;  
+	color: #666666; }
+	
+	/*ADDED FOR SHRINKING/GROWING MENU ON PRODUCTS PAGE */
+.submenu{
+	display: block;
+	height: 19px;
+	text-decoration: none;
+		
+	margin-left: 38px;
+	padding-top: 2px;
+	padding-left: 7px;
+	color: #FFFFFF;
+	font-size: .75em;
+	  }
+
+.hide{
+display: none;  }
+
+.show{
+display: block;  }
+
+/* ADDED FOR PRODUCT SUBMENUS  */
+.submenulink, .submenulink A:link, .submenulink A:visited, .submenulink A:active  {
+	margin-left: 19px;
+	color: #FFFFFF;
+	display: block;
+	width: 178px;
+	height: 19px;
+	line-height: 19px;
+	text-decoration: none;   	}
+
+.submenulink A:hover {
+	display: block;
+	width: 178px;
+	height: 19px;
+	background-color:#56555B;
+	text-decoration: none;	}
+
+.submenuon {
+	display: block;
+	width: 178px;
+	height: 19px;
+	background-color:#56555B;
+	text-decoration: none;	}
+/* END OF STUFF ADDED FOR PRODUCT SUBMENUS  */
+/*END OF STUFF ADDED FOR SHRINKING/GROWING MENU ON PRODUCTS PAGE */
