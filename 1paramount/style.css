@@ -733,3 +733,33 @@ td[width="455"]
 span.footer { visibility: hidden; }
 td[background*="shadow"] { visibility: hidden; }
 img[src*="shadow"] { visibility: hidden; }
+input[type='text']{
+	border: 3px solid #f5f5f5;
+	color: #666;
+	font-size: 18px;
+	height: 64px;
+  line-height: 64px;
+  margin: 0 0 24px !important;
+	padding: 0 12px;
+}
+
+button, input[type="submit"] {
+	background-color: #2a7992;
+	border: none;
+	color: #fff !important;
+	font-size: 18px;
+	padding: 12px 24px;
+	text-transform: uppercase;
+}
+
+.searchForm {
+  width: initial;
+  max-width: 100%;
+}
+
+/*mobile overrides*/
+@media (max-width: 1024px) {
+	table[width="930"]{ max-width: 100%; width: initial; }
+	td[width="635"] { max-width: 100%; width: initial;}
+  img[height="50"] { display: none; }
+}
