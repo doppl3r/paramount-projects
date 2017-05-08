@@ -280,11 +280,9 @@
 				$(".owl-carousel.owl-tab-3").owlCarousel({ autoPlay: false, items : 4, navigation: true });
 				$(".owl-carousel.owl-tab-4").owlCarousel({ autoPlay: false, items : 4, navigation: true });
 
-				//Smoothly Scroll to Anchors
+				//Smoothly scroll to anchor & play video on click
 				var $root = $('html, body');
-				$('a').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
-
-				//Play video on click
+				$('#play-video').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
 				$('#play-video').on('click', function(ev) {	$("#video")[0].src += "&autoplay=1"; ev.preventDefault(); });
 
 
