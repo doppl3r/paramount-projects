@@ -4,6 +4,8 @@ html {
     text-decoration: none; }
   html img {
     max-width: 100%; }
+  html iframe {
+    max-width: 100%; }
   html h1 {
     color: #505050;
     font-size: 36px; }

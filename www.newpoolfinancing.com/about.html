@@ -32,12 +32,12 @@
         </div>
     </nav>
 
-    <section class="header background-playpen" style="background-image: url('img/pool-background-1.jpg');">
+    <section class="header background-playpen water-effect" style="background-image: url('img/pool-background-1.jpg');">
         <div class="wrapper">
             <div class="content">
                 <h4>build your dream pool with financing</h4>
                 <h1>simplified</h1>
-                <a class="btn btn-default" href="https://youtu.be/FCxyTf_LoGY" target="_blank">watch pool financing video</a>
+                <a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>
             </div>
         </div>
     </section>
@@ -274,6 +274,13 @@
         </tbody>
     </table>
 
+    <section id="video-playpen" class="background-playpen water-effect" style="background-image: url('img/pool-background-4.jpg');">
+        <div class="wrapper">
+            <h3 class="normal">Learn More About Paramount Pool Financing Services. Watch Our Video</h3>
+            <iframe id="video" width="854" height="480" src="https://www.youtube.com/embed/FCxyTf_LoGY?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <footer>
         <div class="wrapper">
             <div class="row">
@@ -362,6 +369,23 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="js/jquery.ripples-min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Smoothly scroll to anchor & play video on click
+            var $root = $('html, body');
+            $('#play-video').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
+            $('#play-video').on('click', function(ev) {	$("#video")[0].src += "&autoplay=1"; ev.preventDefault(); });
+        });
+        
+        $( window ).load(function() {
+            $('.water-effect').ripples({ resolution: 128, dropRadius: 50, perturbance: 0.005, });
+        });
+    </script>
 
     <img id="hzDownscaled" style="position: absolute; top: -10000px;">
 </body>

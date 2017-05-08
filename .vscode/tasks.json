@@ -3,5 +3,5 @@
     "version": "0.1.0",
     "command": "node-sass",
     "isShellCommand": true,
-    "args": ["newpoolfinancing/css/stylesheet.scss", "newpoolfinancing/css/stylesheet.css"]
+    "args": ["www.newpoolfinancing.com/css/stylesheet.scss", "www.newpoolfinancing.com/css/stylesheet.css"]
 }
