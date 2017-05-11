@@ -52,7 +52,10 @@ html {
     overflow-x: hidden;
     /*owl carousel*/ }
     html body form table {
-      width: 100%; }
+      width: 100%;
+      border-width: 0 !important; }
+      html body form table td {
+        border-width: 0 !important; }
     html body table[width="930"] {
       max-width: 100%;
       width: initial; }
