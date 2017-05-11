@@ -331,8 +331,19 @@ html {
   html body section.background-playpen h3 {
     font-size: 16px;
     line-height: 21px; }
+  html body section.checkered h1 {
+    font-size: 40px;
+    line-height: 36px; }
+  html body section.checkered h3 {
+    font-size: 21px;
+    line-height: 18px; }
   html body section.checkered .vcenter {
-    padding: 10% 0; }
+    display: block;
+    padding: 10% 12px; }
+  html body section.checkered .image-bg {
+    min-height: initial; }
+  html body section.checkered .content {
+    display: block; }
   html body footer {
     text-align: center; }
   html body table[width="100%"] {

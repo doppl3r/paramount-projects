@@ -392,9 +392,14 @@ html {
           h3 { font-size: 16px; line-height: 21px; }
         }
         &.checkered { 
+          h1 { font-size: 40px; line-height: 36px; }
+          h3 { font-size: 21px; line-height: 18px; }
           .vcenter {
-            padding: 10% 0; 
+            display: block;
+            padding: 10% 12px; 
           }
+          .image-bg { min-height: initial; }
+          .content { display: block; }
         }
       }
       footer {
