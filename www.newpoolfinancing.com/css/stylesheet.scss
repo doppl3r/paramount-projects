@@ -14,7 +14,16 @@ html {
   iframe { max-width: 100%; }
   h1 { color: $color-5; font-size: 36px; }
   h3 { font-size: 30px; }
-  p { color: $color-5; font-family: 'roboto-condensedlight'; font-size: 18px; }
+  p { 
+    color: $color-5; 
+    font-family: 'roboto-condensedlight'; 
+    font-size: 18px; 
+
+    a { 
+      text-decoration: underline; 
+      color: #668778; 
+    }
+  }
   .equal-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -187,6 +196,44 @@ html {
         .btn { margin-top: 24px; }
       }
       &.left-align { text-align: left; }
+      &.checkered {
+        padding: 0;
+
+        h1 { 
+          color: #fff; 
+          font-family: 'roboto-condensedbold';
+          font-size: 54px; 
+          line-height: 48px; 
+          margin: 0 0 12px; 
+          text-transform: uppercase; 
+        }
+        h3 { 
+          color: #fff; 
+          font-size: 30px; 
+          line-height: 28px; 
+          margin: 0 0 12px; 
+          text-transform: uppercase; 
+        }
+        .btn { margin: 24px auto 0; }
+        .image-bg { 
+          min-height: 576px; 
+          background: url('') no-repeat;
+          background-position-x: 50%;
+          background-position-y: center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          min-height: 320px;
+          padding: 15% 0;
+          position: relative;
+        }
+        .content {
+          margin: 0 auto;
+          padding: 0;
+          text-align: center;
+        }
+      }
     }
     
     footer {
@@ -344,9 +391,19 @@ html {
           h1 { font-size: 48px; line-height: 42px; }
           h3 { font-size: 16px; line-height: 21px; }
         }
+        &.checkered { 
+          .vcenter {
+            padding: 10% 0; 
+          }
+        }
       }
       footer {
         text-align: center;
+      }
+      table[width="100%"] { 
+        width: auto; 
+        
+        td { padding: 0 !important; }
       }
       .owl-carousel {
         .owl-prev { left: 0; }

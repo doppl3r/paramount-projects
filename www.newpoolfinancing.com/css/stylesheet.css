@@ -15,6 +15,9 @@ html {
     color: #505050;
     font-family: 'roboto-condensedlight';
     font-size: 18px; }
+    html p a {
+      text-decoration: underline;
+      color: #668778; }
   html .equal-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -159,6 +162,39 @@ html {
           margin-top: 24px; }
       html body section.left-align {
         text-align: left; }
+      html body section.checkered {
+        padding: 0; }
+        html body section.checkered h1 {
+          color: #fff;
+          font-family: 'roboto-condensedbold';
+          font-size: 54px;
+          line-height: 48px;
+          margin: 0 0 12px;
+          text-transform: uppercase; }
+        html body section.checkered h3 {
+          color: #fff;
+          font-size: 30px;
+          line-height: 28px;
+          margin: 0 0 12px;
+          text-transform: uppercase; }
+        html body section.checkered .btn {
+          margin: 24px auto 0; }
+        html body section.checkered .image-bg {
+          min-height: 576px;
+          background: url("") no-repeat;
+          background-position-x: 50%;
+          background-position-y: center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          min-height: 320px;
+          padding: 15% 0;
+          position: relative; }
+        html body section.checkered .content {
+          margin: 0 auto;
+          padding: 0;
+          text-align: center; }
     html body footer {
       background-color: #e9fff4;
       overflow-x: hidden;
@@ -295,8 +331,14 @@ html {
   html body section.background-playpen h3 {
     font-size: 16px;
     line-height: 21px; }
+  html body section.checkered .vcenter {
+    padding: 10% 0; }
   html body footer {
     text-align: center; }
+  html body table[width="100%"] {
+    width: auto; }
+    html body table[width="100%"] td {
+      padding: 0 !important; }
   html body .owl-carousel .owl-prev {
     left: 0; }
   html body .owl-carousel .owl-next {
