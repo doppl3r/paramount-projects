@@ -1,0 +1,55 @@
+# Paramount Pools Notes
+### [05-11-2017]
+- New Pool Financing
+    - Update newpoolfinancing checkered text (see pdf)
+- 1paramount.com
+    - Global Changes
+        - Change Nav 'Support' to 'Resources'
+        - Mobile remove map on mobile devices
+        - Add small icon for 'Made in America'
+        - Change 'Photo Gallery' to 'Product Gallery'
+        - Remove MDX manual
+    - Home page
+        - SwingJet should be removed from slider
+        - VectorJet should be removed from slider
+        - Make slider elements clickable
+        - "Pool life simplified" under main headline
+    - PV3 
+        - Use brochure points from PDF
+    - PCC2000
+        - Video is not playing
+    - PVR
+        - Fix button
+        - Animate popup with 2 layers. Popup head going up and down while body stays fixed
+    - Support > Cad
+        - Add Vanish PDF (currently merged with Vanquish)
+        - Add a text that says "Email the form CAD to ...
+    - In-Floor
+        Add video for 'Save Up to...'
+    - Debris page
+        - remove white logos on the left side
+    - Paraskim 
+        - Fix arrows from being mandarin
+    - EDC
+        - Make white tex more readable
+    - Paraskim Hero
+        - Fix text from being scrunched
+        - Add playpen for paraskim SM
+    - DDC arrows are missing
+        - Make MVFuse slider taller
+    - Paraglo
+        - Fix Times New Romans font error for sliders
+        - 'Features and benefits' needs white logos
+    - Jetpak 
+        - Hero text is too large
+        - Add colors: Sam will deliver
+    - Parajets
+    - Airport
+    - Paralevel
+        - Add a new picture
+    - Marketing Materials
+        - Change to toggles
+    - Warrant
+        - Add titles above important fields
+    - Contact page
+        - Show 'Paramount' as text rather than address
