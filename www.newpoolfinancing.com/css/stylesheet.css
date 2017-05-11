@@ -14,10 +14,16 @@ html {
   html p {
     color: #505050;
     font-family: 'roboto-condensedlight';
-    font-size: 18px; }
+    font-size: 18px;
+    line-height: initial; }
     html p a {
       text-decoration: underline;
       color: #668778; }
+  html ol {
+    font-family: 'roboto-condensedlight';
+    font-size: 18px;
+    line-height: initial;
+    text-align: left; }
   html .equal-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -45,6 +51,8 @@ html {
     margin-top: 86px;
     overflow-x: hidden;
     /*owl carousel*/ }
+    html body form table {
+      width: 100%; }
     html body table[width="930"] {
       max-width: 100%;
       width: initial; }
@@ -135,6 +143,7 @@ html {
       html body nav .menu-button {
         display: none; }
     html body section {
+      overflow-x: hidden;
       padding: 64px 0;
       text-align: center; }
       html body section.background-playpen {

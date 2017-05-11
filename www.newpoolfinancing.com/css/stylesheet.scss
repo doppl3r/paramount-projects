@@ -18,11 +18,18 @@ html {
     color: $color-5; 
     font-family: 'roboto-condensedlight'; 
     font-size: 18px; 
+    line-height: initial;
 
     a { 
       text-decoration: underline; 
       color: #668778; 
     }
+  }
+  ol { 
+    font-family: 'roboto-condensedlight'; 
+    font-size: 18px;
+    line-height: initial;
+    text-align: left;
   }
   .equal-height {
     display: -webkit-box;
@@ -59,6 +66,7 @@ html {
     margin-top: $nav-height;
     overflow-x: hidden; 
 
+    form table { width: 100%; }
     table[width="930"]{ max-width: 100%; width: initial; }
 	  td[width="635"] { max-width: 100%; width: initial; }
     .wrapper {
@@ -160,6 +168,7 @@ html {
       .menu-button { display: none; }
     }
     section {
+      overflow-x: hidden;
       padding: 64px 0;
       text-align: center;
 
