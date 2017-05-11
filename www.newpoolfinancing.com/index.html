@@ -21,7 +21,13 @@
 				<div class="content">
 					<h4>build your dream pool with financing</h4>
 					<h1>simplified</h1>
-					<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>
+					<!--<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>-->
+					<div class="page">
+						<a href="#media-popup" class="btn btn-default" data-media="//www.youtube.com/embed/FCxyTf_LoGY?rel=0">watch pool financing video</a>
+						<div class="popup" id="media-popup">
+							<iframe width="747" height="420" src="" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -61,8 +67,8 @@
 				</div>
 				<div class="col-sm-6 image-bg vcenter water-effect" style="background-image: url('img/pool-background-6.jpg');">
 					<div class="content">
-						<h1>Need a<br>pool builder?</h1>
-						<h3>we'll help you find one</h3>
+						<h1>Top 50 Builders</h1>
+						<h3>62% are authorized Paramount Dealers</h3>
 					</div>
 				</div>
 			</div>
@@ -129,6 +135,23 @@
 				var $root = $('html, body');
 				$('#play-video').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
 				$('#play-video').on('click', function(ev) {	$("#video")[0].src += "&autoplay=1"; ev.preventDefault(); });
+
+				/*popup feature*/
+				$("[data-media]").on("click", function(e) {
+					e.preventDefault();
+					var $this = $(this);
+					var videoUrl = $this.attr("data-media");
+					var popup = $this.attr("href");
+					var $popupIframe = $(popup).find("iframe");
+					$popupIframe.attr("src", videoUrl);
+					$this.closest(".page").addClass("show-popup");
+				});
+				$(".popup").on("click", function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					$(".page").removeClass("show-popup");
+				});
+				$(".popup > iframe").on("click", function(e) { e.stopPropagation(); });
 			});
 			
 			$( window ).load(function() {
