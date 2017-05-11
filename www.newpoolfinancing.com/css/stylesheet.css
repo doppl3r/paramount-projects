@@ -45,6 +45,12 @@ html {
     margin-top: 86px;
     overflow-x: hidden;
     /*owl carousel*/ }
+    html body table[width="930"] {
+      max-width: 100%;
+      width: initial; }
+    html body td[width="635"] {
+      max-width: 100%;
+      width: initial; }
     html body .wrapper {
       max-width: 1200px;
       margin: 0 auto;
@@ -218,6 +224,7 @@ html {
         max-width: 100%; }
       html body .owl-carousel .item p {
         color: #505050;
+        line-height: initial;
         margin-top: 8px;
         margin-bottom: 0; }
         html body .owl-carousel .item p strong {
@@ -259,6 +266,10 @@ html {
       right: -48px; }
       html body .owl-carousel .owl-next:after {
         content: '>'; }
+    html body .owl-carousel.tight-nav .owl-prev {
+      left: 0; }
+    html body .owl-carousel.tight-nav .owl-next {
+      right: 0; }
     html body .nav-tabs {
       border: none;
       text-align: center; }

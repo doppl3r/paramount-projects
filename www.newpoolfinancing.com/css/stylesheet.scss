@@ -59,6 +59,8 @@ html {
     margin-top: $nav-height;
     overflow-x: hidden; 
 
+    table[width="930"]{ max-width: 100%; width: initial; }
+	  td[width="635"] { max-width: 100%; width: initial; }
     .wrapper {
       max-width: 1200px;
       margin: 0 auto;
@@ -268,6 +270,7 @@ html {
         img { width: initial !important; max-width: 100%; }
         p {
           color: $color-5;
+          line-height: initial;
           margin-top: 8px; margin-bottom: 0;
 
           strong { font-size: 21px; }
@@ -304,6 +307,11 @@ html {
       }
       .owl-prev { left: -48px; &:after { content: '<'; }}
       .owl-next { right: -48px; &:after { content: '>'; }}
+
+      &.tight-nav { 
+        .owl-prev { left: 0; }
+        .owl-next { right: 0; }
+      }
     }
     .nav-tabs {
       border: none;
