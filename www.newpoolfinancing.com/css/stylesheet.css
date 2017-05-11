@@ -215,6 +215,8 @@ html {
           margin: 0 auto;
           padding: 0;
           text-align: center; }
+        html body section.checkered .vcenter {
+          overflow: hidden; }
     html body footer {
       background-color: #e9fff4;
       overflow-x: hidden;
