@@ -19,8 +19,8 @@
 		<section class="header header-1 water-effect">
 			<div class="wrapper">
 				<div class="content">
-					<h4>build your dream pool with financing</h4>
-					<h1>simplified</h1>
+					<h4>financing your pool just got simpler</h4>
+					<h1>see how easy it is</h1>
 					<!--<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>-->
 					<div class="page">
 						<a href="#media-popup" class="btn btn-default" data-media="//www.youtube.com/embed/FCxyTf_LoGY?rel=0">watch pool financing video</a>
@@ -29,14 +29,15 @@
 						</div>
 					</div>
 				</div>
+				<a id="learn-more-button" class="learn-more" href="#learn-more-playpen">learn more</a>
 			</div>
 		</section>
 
 
-		<section>
+		<section id="learn-more-playpen">
 			<div class="wrapper">
 				<h1>Financing Your New Swimming Pool is Simple</h1>
-    			<p style="max-width: 800px; margin: 0 auto 64px;">Paramount Capital is part of the Paramount Pool & Spa Systems family working to help you find a financing program that fits your needs to build your dream pool. If you’re ready to build your your very own backyard resort simply <a href="application_online.asp">complete the pre-application form</a>.  Here is an overview of the services we offer:</p>
+    			<p style="max-width: 800px; margin: 0 auto 64px;">Paramount Capital is part of the Paramount Pool & Spa Systems family working to help you find a financing program that fits your needs to build your dream pool. If you’re ready to build your your very own backyard resort simply <a href="application_online.html">complete the pre-application form</a>.  Here is an overview of the services we offer:</p>
 				<div id="service-playpen-1"></div>
 			</div>
 		</section>
@@ -44,31 +45,17 @@
 
 		<section class="checkered">
 			<div class="row equal-height">
-				<div class="col-sm-6 image-bg vcenter water-effect" style="background-image: url('img/pool-background-5.jpg');">
-					<h1>Build Your<br>Dream Pool</h1>
-					<h3>We'll help you find financing</h3>
+				<div class="col-sm-6 image-bg vcenter" style="background-color: #9db5a8;">
+					<div class="content">
+						<h1 style="text-shadow: none;">Find a<br>builder</h1>
+						<a href="find.html" class="btn btn-default">Find a builder form</a>
+					</div>
 				</div>
-				<div class="col-sm-6 vcenter" style="background-color: #9db5a8;">
+				<div class="col-sm-6 vcenter" style="background-color: #b8cac0;">
 					<div class="content">
 						<h3>get started.</h3>
 						<h1>find financing</h1>
-						<a href="application_online.asp" class="btn btn-default">Pre-Application Form</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<section class="checkered">
-			<div class="row equal-height">
-				<div class="col-sm-6 vcenter" style="background-color: #b8cac0;">
-					<h3>Find a paramount dealer</h3>
-					<h1>Find a builder</h1>
-					<a href="findbuilder.html" class="btn btn-default">Builders near you</a>
-				</div>
-				<div class="col-sm-6 image-bg vcenter water-effect" style="background-image: url('img/pool-background-6.jpg');">
-					<div class="content">
-						<h1>Top 50 Builders</h1>
-						<h3>62% are authorized Paramount Dealers</h3>
+						<a href="application_online.html" class="btn btn-default">Pre-Application Form</a>
 					</div>
 				</div>
 			</div>
@@ -76,11 +63,7 @@
 
 		<section class="checkered">
 			<div class="row equal-height">
-				<div class="col-sm-6 image-bg vcenter water-effect" style="background-image: url('img/pool-background-7.jpg');">
-					<h1>top pool<br>builders</h1>
-					<h3>join our team of top builders</h3>
-				</div>
-				<div class="col-sm-6 vcenter" style="background-color: #9db5a8;">
+				<div class="col-sm-12 image-bg vcenter" style="background-image: url('img/pool-background-1.jpg');">
 					<div class="content">	
 						<h3 style="max-width: 480px; margin: 0 auto 12px;">Request information on becoming an authorized paramount dealer</h3>
 						<h1>become a dealer</h1>
@@ -132,9 +115,7 @@
 				$("#product-playpen-1 .owl-carousel").owlCarousel({ autoPlay: false, items : 3, navigation: true });
 
 				//Smoothly scroll to anchor & play video on click
-				var $root = $('html, body');
-				$('#play-video').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
-				$('#play-video').on('click', function(ev) {	$("#video")[0].src += "&autoplay=1"; ev.preventDefault(); });
+				$('#learn-more-button').click(function () { var href = $.attr(this, 'href'); $('html, body').animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
 
 				/*popup feature*/
 				$("[data-media]").on("click", function(e) {

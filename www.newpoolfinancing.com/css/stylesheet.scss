@@ -96,6 +96,7 @@ html {
       .wrapper { 
         display: flex;
         height: inherit;
+        position: relative;
       }
       &.header-1 { 
         background-image: url('../img/header-image.jpg');
@@ -111,9 +112,25 @@ html {
         margin: auto;
         text-align: center;
       }
+      .learn-more {
+        bottom: 12px;
+        color: #fff;
+        font-size: 12px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:after {
+          content: '\2193';
+          display: block;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
       h1 {
         color: #fff;
-        font-size: 92px;
+        font-size: 72px;
         line-height: 80px;
         margin: 0;
         text-shadow: 0 0 15px rgba(14,103,119,0.5);

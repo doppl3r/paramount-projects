@@ -79,7 +79,8 @@ html {
       position: relative; }
       html body .header .wrapper {
         display: flex;
-        height: inherit; }
+        height: inherit;
+        position: relative; }
       html body .header.header-1 {
         background-image: url("../img/header-image.jpg"); }
         html body .header.header-1 .btn {
@@ -91,9 +92,23 @@ html {
         display: inline-block;
         margin: auto;
         text-align: center; }
+      html body .header .learn-more {
+        bottom: 12px;
+        color: #fff;
+        font-size: 12px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+        text-transform: uppercase; }
+        html body .header .learn-more:after {
+          content: '\2193';
+          display: block;
+          font-size: 16px;
+          line-height: 16px; }
       html body .header h1 {
         color: #fff;
-        font-size: 92px;
+        font-size: 72px;
         line-height: 80px;
         margin: 0;
         text-shadow: 0 0 15px rgba(14, 103, 119, 0.5);
