@@ -73,6 +73,10 @@ html {
 
         td { border-width: 0 !important; } 
       }
+      .custom-7 {
+        .background,
+        .body { background-color: transparent; }
+      }
     }
     table[width="930"]{ max-width: 100%; width: initial; }
 	  td[width="635"] { max-width: 100%; width: initial; }
@@ -273,6 +277,8 @@ html {
         }
         .vcenter { overflow: hidden; }
       }
+      .light-gray-background { background-color: #f7f7f7; }
+      .add-padding { padding: 0 12px; }
     }
     
     footer {
