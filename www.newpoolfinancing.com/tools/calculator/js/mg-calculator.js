@@ -180,15 +180,15 @@ function mgCalculatorCalculate() {
 	mgLastPayment.innerHTML = (currentMonth + " " + currentYear);	
 	
 	/* Begin replace dots with commas */
-	if (mgAmortization != null) mgAmortization.innerHTML = mgAmortization.innerHTML.replace(".", ",");
-	mgTotalPayment.innerHTML = mgTotalPayment.innerHTML.replace(".", ",");
-	mgMonthlyPMI.innerHTML = mgMonthlyPMI.innerHTML.replace(".", ",");
-	mgMonthlyPayment.innerHTML = mgMonthlyPayment.innerHTML.replace(".", ",");
-	mgTaxPaid.innerHTML = mgTaxPaid.innerHTML.replace(".", ",");
-	mgTotalPMI.innerHTML = mgTotalPMI.innerHTML.replace(".", ",");
-	mgTotalInterest.innerHTML = mgTotalInterest.innerHTML.replace(".", ",");
-	mgYearlyTax.innerHTML = mgYearlyTax.innerHTML.replace(".", ",");
-	mgAnnualPayment.innerHTML = mgAnnualPayment.innerHTML.replace(".", ",");
+	if (mgAmortization != null) mgAmortization.innerHTML = mgAmortization.innerHTML.replace(".", ".");
+	mgTotalPayment.innerHTML = mgTotalPayment.innerHTML.replace(".", ".");
+	mgMonthlyPMI.innerHTML = mgMonthlyPMI.innerHTML.replace(".", ".");
+	mgMonthlyPayment.innerHTML = mgMonthlyPayment.innerHTML.replace(".", ".");
+	mgTaxPaid.innerHTML = mgTaxPaid.innerHTML.replace(".", ".");
+	mgTotalPMI.innerHTML = mgTotalPMI.innerHTML.replace(".", ".");
+	mgTotalInterest.innerHTML = mgTotalInterest.innerHTML.replace(".", ".");
+	mgYearlyTax.innerHTML = mgYearlyTax.innerHTML.replace(".", ".");
+	mgAnnualPayment.innerHTML = mgAnnualPayment.innerHTML.replace(".", ".");
 	/* End replace dots with commas */
 	
 	/* Hide errors or messages, if any */
