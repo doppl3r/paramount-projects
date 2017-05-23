@@ -10,13 +10,13 @@
 			<div class="mg-calculator-header">
 				Loan calculator
 			</div>
-			<div class="mg-calculator-item-container">
+			<div class="mg-calculator-item-container" style="display: none;">
 				<label> Home value </label>
 				<div class="mg-tip">
 					? <span class="mg-tiptext">Home value/price</span>
 				</div>
 				<div class="mg-calculator-item">
-					<input type="text" id="homeValue" value="100000" class="mg-calculator-input">
+					<input type="text" id="homeValue" value="0" class="mg-calculator-input"> <!--value="100000"-->
 					<span class="mg-input-label">$</span>
 				</div>
 			</div>
@@ -50,7 +50,7 @@
 					<span class="mg-input-label">%</span>
 				</div>
 			</div>
-			<div class="mg-calculator-item-container">
+			<div class="mg-calculator-item-container" style="display: none;">
 				<label> Closing costs </label>
 				<div class="mg-tip">
 					? <span class="mg-tiptext">Closing costs percentage</span>
@@ -60,17 +60,17 @@
 					<span class="mg-input-label">%</span>
 				</div>
 			</div>
-			<div class="mg-calculator-item-container">
+			<div class="mg-calculator-item-container" style="display: none;">
 				<label> Private Mortgage Insurance (PMI) </label>
 				<div class="mg-tip">
 					? <span class="mg-tiptext">Private Mortgage Insurance (PMI)</span>
 				</div>
 				<div class="mg-calculator-item">
-					<input type="text" id="pmi" value="0.69" class="mg-calculator-input">
+					<input type="text" id="pmi" value="0" class="mg-calculator-input"> <!--value="0.69"-->
 					<span class="mg-input-label">%</span>
 				</div>
 			</div>
-			<div class="mg-calculator-item-container">
+			<div class="mg-calculator-item-container" style="display: none;">
 				<label> Property tax </label>
 				<div class="mg-tip">
 					? <span class="mg-tiptext">Yearly property tax percentage</span>
@@ -142,7 +142,7 @@
 				? <span class="mg-tiptext">Total interest paid</span>
 			</div>
 		</div>
-		<div class="mg-calculator-item-container">
+		<div class="mg-calculator-item-container" style="display: none;">
 			<div class="mg-calculator-item mg-calculator-value" id="mgYearlyTax">
 				-
 			</div><label> Yearly property tax paid </label>
@@ -150,7 +150,7 @@
 				? <span class="mg-tiptext">Yearly property tax paid</span>
 			</div>
 		</div>
-		<div class="mg-calculator-item-container">
+		<div class="mg-calculator-item-container" style="display: none;">
 			<div class="mg-calculator-item mg-calculator-value" id="mgTotalPMI">
 				-
 			</div><label> Total PMI </label>
@@ -158,7 +158,7 @@
 				? <span class="mg-tiptext">Total Private Mortgage Insurance paid</span>
 			</div>
 		</div>
-		<div class="mg-calculator-item-container">
+		<div class="mg-calculator-item-container" style="display: none;">
 			<div class="mg-calculator-item mg-calculator-value" id="mgMonthlyPMI">
 				-
 			</div><label> Monthly PMI </label>
@@ -166,7 +166,7 @@
 				? <span class="mg-tiptext">Monthly Private Mortgage Insurance paid</span>
 			</div>
 		</div>
-		<div class="mg-calculator-item-container">
+		<div class="mg-calculator-item-container" style="display: none;">
 			<div class="mg-calculator-item mg-calculator-value" id="mgTaxPaid">
 				-
 			</div><label> Total tax paid </label>
