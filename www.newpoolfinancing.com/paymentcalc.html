@@ -22,7 +22,7 @@
 <body>
     <nav></nav>
 
-    <section class="header background-playpen water-effect" style="background-image: url('img/pool-background-1.jpg');">
+    <section class="header background-playpen water-effect" style="background-image: url('img/calc-bg.jpg');">
         <div class="wrapper">
             <div class="content">
                 <h1>Payment Calculator</h1>
@@ -34,7 +34,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-sm-6">
-                    <iframe src="tools/calculator/MG_LightWhite.html" frameborder="0" scrolling="no" seamless="seamless" style="display:block; width:100%;"></iframe>
+                    <iframe src="tools/calculator/MG_LightWhite-new.html" frameborder="0" scrolling="no" seamless="seamless" style="display:block; width:100%;"></iframe>
                 </div>
                 <div class="col-sm-6">
                     <div id="side-banner"></div>
@@ -51,7 +51,11 @@
     <script>
         $(document).ready(function () {
             $("nav").load("nav.html");
-            $('iframe').load(function () { resizeCalc(this); });
+            $('iframe').load(function () { 
+                resizeCalc(this); 
+                var iframe = $('iframe').contents();
+                iframe.contents().find('.mg-calculator-submit').click(function(){ resizeCalc($('iframe')); });
+            });
             $("#side-banner").load("side-banner.html");
             $("footer").load("footer.html");
         });

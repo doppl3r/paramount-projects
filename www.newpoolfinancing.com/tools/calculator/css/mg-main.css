@@ -1,6 +1,7 @@
 /* Calculator */
 .mgCalculator, #mgResults, #mgPrintButton {
 	display: none;
+	box-sizing: border-box;
 }
 .mgNoScript {
 	display: block;
