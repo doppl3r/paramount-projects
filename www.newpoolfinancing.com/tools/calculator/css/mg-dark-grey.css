@@ -1,0 +1,88 @@
+.mg-calculator-container {
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: #2e2e2e;
+}
+.mg-calculator-header {
+	border-bottom: 1px solid #3f6cc3;
+}
+.mg-calculator-input {
+	border: 0;
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #dcdcdc;
+	background-color: #565656;
+}
+.mg-calculator-input:focus {
+	background-color: #7b7b7b;	
+}
+.mg-calculator-item-container label {
+	font-size: 13px;
+}
+.mg-calculator-submit, .mg-calculator-reset {
+	text-align: center;
+	border-radius: 30px;
+	background-color: #3f6cc3;
+}
+.mg-calculator-reset {
+	margin-top: 0;
+	background-color: #565656;
+}
+.mg-buttons {
+	text-align: center;
+}
+.mg-input-label {
+	border-right: 1px solid #444444;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	color: #dcdcdc;
+	background-color: #3f6cc3;
+}
+.mg-error-display {
+	color: #ffeb3b;
+}
+
+/* Amortization table */
+.mg-calculator-results {
+	color: #cccccc;
+	background-color: #222222;
+}
+.mg-amortization {
+	border: 1px solid #000000;
+	border-radius: 5px;
+}
+.mg-amortization tr:nth-child(even) {
+	background-color: #444444;
+}
+.mg-amortization thead {
+	color: #cccccc;
+	background-color: #333333;
+}
+.mg-amortization tbody {
+	color: #cccccc;
+	background-color: #545454;
+}
+.mg-amortization .mg-amortization-body tr:hover, .mg-yearly-row td  {
+	color: #ffffff;
+	background-color: #3f6cc3;
+}
+
+/* Tooltip */
+.mg-tip {
+	color: #e9e9e9;
+	background-color: #3f6cc3;
+}
+.mg-tip .mg-tiptext {
+    background-color: #3f6cc3;
+    color: #ffffff;
+}
+.mg-tip .mg-tiptext::after {
+	 border-color: #3f6cc3 transparent transparent transparent;
+}
+.mg-print-button {
+	color: #ffffff;
+    background-color: #000;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+}

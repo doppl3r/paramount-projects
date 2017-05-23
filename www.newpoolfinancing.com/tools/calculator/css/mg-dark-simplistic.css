@@ -1,0 +1,102 @@
+.mg-calculator-container {
+	color: #bfbfbf;
+	background-color: #333333;
+}
+.mg-calculator-header {
+	border-bottom: 1px solid #31508c;
+	color: #ffffff;
+	background-color: transparent;
+}
+.mg-calculator-input {
+	border: 0;
+	border-bottom: 2px solid #545454;
+	padding: 10px 7px 7px 10px;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #ffffff;
+	background-color: transparent;
+}
+.mg-calculator-input:focus {
+	color: #6498fe;
+	border-bottom: 2px solid #6498fe;
+}
+ .mg-calculator-input:focus + span {
+	color: #6498fe;
+ }
+.mg-calculator-item-container:hover label {
+	color: #6498fe;
+}
+.mg-calculator-item-container {
+	margin: 20px 0;
+}
+.mg-calculator-item-container label {
+	font-size: 13px;
+}
+.mg-calculator-submit, .mg-calculator-reset {
+	text-align: center;
+	color: #ffffff;
+}
+.mg-calculator-submit {
+	background-color: #31508c;
+}
+.mg-calculator-reset {
+	margin-top: 0;
+	background-color: #545454;
+}
+.mg-buttons {
+	text-align: center;
+}
+.mg-input-label {
+	color: #cccccc;
+	background-color: transparent;
+	margin-top: 4px;
+	font-size: 13px;
+}
+.mg-error-display {
+	text-decoration: underline;
+	color: #cccccc;
+}
+
+/* Amortization table */
+.mg-calculator-results {
+	color: #cccccc;
+	background-color: #222222;
+}
+.mg-amortization {
+	border: 1px solid #000000;
+}
+.mg-amortization tr:nth-child(even) {
+	background-color: #444444;
+}
+.mg-amortization thead {
+	color: #cccccc;
+	background-color: #333333;
+}
+.mg-amortization tbody {
+	color: #cccccc;
+	background-color: #545454;
+}
+.mg-amortization .mg-amortization-body tr:hover, .mg-yearly-row td  {
+	color: #ffffff;
+	background-color: #31508c;
+}
+
+/* Tooltip */
+.mg-tip {
+	background-color: #31508c;
+    color: #cccccc; 
+}
+.mg-tip .mg-tiptext {
+    background-color: #cccccc;
+    color: #222222;
+    border: 1px solid #222222;
+}
+.mg-tip .mg-tiptext::after {
+	 border-color: #cccccc transparent transparent transparent;
+}
+.mg-print-button {
+	color: #ffffff;
+    background-color: #000000;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+}
