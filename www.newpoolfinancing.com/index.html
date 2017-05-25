@@ -16,28 +16,55 @@
 	<body style="overflow-x:hidden;">
 		<nav></nav>
 
-		<section class="header header-1 water-effect">
-			<div class="wrapper">
-				<div class="content">
-					<h4>financing your pool just got simpler</h4>
-					<h1>see how easy it is</h1>
-					<!--<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>-->
-					<div class="page">
-						<a href="#media-popup" class="btn btn-default" data-media="//www.youtube.com/embed/FCxyTf_LoGY?rel=0">watch pool financing video</a>
-						<div class="popup" id="media-popup">
-							<iframe width="747" height="420" src="" frameborder="0" allowfullscreen></iframe>
+		<div class="owl-carousel" id="owl-header">
+			<div class="item no-padding">
+				<section class="header header-1 water-effect">
+					<div class="wrapper">
+						<div class="content">
+							<h4>financing your pool</h4>
+							<h1>just got simpler</h1>
+							<div class="page">
+								<a href="#media-popup" class="btn btn-default" data-media="//www.youtube.com/embed/FCxyTf_LoGY?rel=0">see how easy it is</a>
+								<div class="popup" id="media-popup">
+									<iframe width="747" height="420" src="" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+						<a id="learn-more-button" class="learn-more" href="#learn-more-playpen">learn more</a>
+					</div>
+				</section>
+			</div>
+			<div class="item no-padding">
+				<section class="header header-2 water-effect">
+					<div class="wrapper">
+						<div class="content">
+							<h4>fill out our online</h4>
+							<h1>pre-application form</h1>
+							<!--<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>-->
+							<a href="application_online.html" class="btn btn-default">get started</a>
 						</div>
 					</div>
-				</div>
-				<a id="learn-more-button" class="learn-more" href="#learn-more-playpen">learn more</a>
+				</section>
 			</div>
-		</section>
+			<div class="item no-padding">
+				<section class="header header-3 water-effect">
+					<div class="wrapper">
+						<div class="content">
+							<h4>find an authorized</h4>
+							<h1>pool builder</h1>
+							<!--<a id="play-video" class="btn btn-default" href="#video-playpen">watch pool financing video</a>-->
+							<a href="findbuilder.html" class="btn btn-default">find a builder</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
 
 
 		<section id="learn-more-playpen">
 			<div class="wrapper">
 				<h1>Financing Your New Swimming Pool is Simple</h1>
-    			<p style="max-width: 800px; margin: 0 auto 64px;">Paramount Capital is part of the Paramount Pool & Spa Systems family working to help you find a financing program that fits your needs to build your dream pool. If you’re ready to build your your very own backyard resort simply <a href="application_online.html">complete the pre-application form</a>.  Here is an overview of the services we offer:</p>
+    			<p style="max-width: 800px; margin: 0 auto 64px;">Paramount Capital is part of the Paramount Pool & Spa Systems family working to help you find a financing program that fits your needs to build your dream pool. If you’re ready to build your very own backyard resort, simply complete the <a href="application_online.html">pre-application form</a>. Here is an overview of the services we offer:</p>
 				<div id="service-playpen-1"></div>
 			</div>
 		</section>
@@ -99,6 +126,8 @@
 
 		<footer></footer>
 
+		<a href="findbuilder.html" class="contact-tab" style="display: none;"><img src="img/find-a-builder.png" /></a>
+
 		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="js/jquery.ripples-min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -107,6 +136,7 @@
 			$(document).ready(function () {
 				/*load assets*/
 				$("nav").load("nav.html");
+				$("#owl-header").owlCarousel({ autoPlay: 4000, items : 3, singleItem: true, navigation: true });
 				$("#service-playpen-1").load("service-carousel-1.html");
 				$("#product-playpen-1").load("product-carousel-1.html");
 				$("#product-playpen-2").load("product-carousel-2.html");

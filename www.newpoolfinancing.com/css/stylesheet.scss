@@ -104,10 +104,16 @@ html {
       }
       &.header-1 { 
         background-image: url('../img/header-image.jpg');
-        
-        .btn { 
-          margin-top: 16px;
-        }
+        .btn { margin-top: 16px; }
+      }
+      &.header-2 { 
+        background-image: url('../img/application-bg.jpg');
+        background-position-y: 15%;
+        .btn { margin-top: 16px; background-color: rgba(255,255,255,0.25); }
+      }
+      &.header-3 { 
+        background-image: url('../img/builder.jpg');
+        .btn { margin-top: 16px; background-color: rgba(255,255,255,0.25); }
       }
       &.background-playpen { height: 320px; }
       .content {
@@ -119,14 +125,14 @@ html {
       .learn-more {
         bottom: 12px;
         color: #fff;
-        font-size: 12px;
+        font-size: 16px;
         left: 0;
         position: absolute;
         right: 0;
         text-decoration: none;
         text-transform: uppercase;
         &:after {
-          content: '\2193';
+          content: '\25bc';
           display: block;
           font-size: 16px;
           line-height: 16px;
@@ -319,6 +325,7 @@ html {
           strong { font-size: 21px; }
           &:nth-of-type(2){ margin-top: 0; }
         }
+        &.no-padding { padding: 0; }
       }
       .owl-controls {
         position: absolute; 
@@ -403,6 +410,13 @@ html {
         left:50%;
         margin-left:-373px;
     }
+  }
+  .contact-tab { 
+    position: fixed; 
+    top: 20%; 
+    right: 0; 
+    z-index: 99999; 
+    display: block !important; 
   }
 }
 
@@ -494,6 +508,7 @@ html {
           margin-left: -50%;
       }
     }
+    .contact-tab { display: none !important; }
   }
 }
 @media (max-height: 639px) and (orientation: landscape) {}
