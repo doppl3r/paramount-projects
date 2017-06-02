@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <title>Paramount Capital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+        img[src="images/ad4.png"],
+        img[src="images/ad1.png"],
+        img[src="images/ad2.png"],
+        img[src="images/ad3.png"] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+
+    <section class="header background-playpen water-effect" style="background-image: url('img/pool-background-1.jpg');">
+        <div class="wrapper">
+            <div class="content">
+                <h1>Inactive Dealer</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p align="center"><font color="#658879">
+                    <span class="title">We're sorry, but this Paramount dealer is not 
+                    currently participating in this program</span></font><span class="title"><font color="#658879">.&nbsp; </font> </span></p><p align="center">
+                    <font color="#658879">
+                    <span class="title">Please feel free to contact us!</span></font></p><p align="center">
+                    <span class="title"><font color="#658879">Paramount Capital<br>
+                    </font></span>295 East Corporate Place, Suite 100 <br>
+                    Chandler, AZ 85225 </p>
+                    <p align="center">Toll Free: 877.289.3866 <br>
+                    Phone: 480.893.7607 <br>
+                    Fax: 877.766.5729 </p>
+                    <p align="center">Scott Pleasant - <a href="mailto:spleasant@1paramount.com">
+                    spleasant@1paramount.com</a>&nbsp; <br>
+                    Donnetta Alford - <a href="mailto:dalford@1paramount.com">
+                    dalford@1paramount.com</a> </p>
+                </div>
+                <div class="col-sm-6">
+                    <div id="side-banner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("nav").load("nav.html");
+            $("#side-banner").load("side-banner.html");
+            $("footer").load("footer.html");
+            //Smoothly scroll to anchor & play video on click
+            var $root = $('html, body');
+            $('#play-video').click(function () { var href = $.attr(this, 'href'); $root.animate({ scrollTop: ($(href).offset().top) - ($('nav').height()) }, 500, function () {}); return false;});
+            $('#play-video').on('click', function(ev) {	$("#video")[0].src += "&autoplay=1"; ev.preventDefault(); });
+        });
+    </script>
+
+    <img id="hzDownscaled" style="position: absolute; top: -10000px;">
+</body>
+</html>
